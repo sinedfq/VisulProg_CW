@@ -1,0 +1,31 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:converters="clr-namespace:CourseWork.Converters"
+        xmlns:controls="using:CourseWork.Views.Control">
+  <Design.PreviewWith>
+	  <controls:SemiSummatorControl />
+  </Design.PreviewWith>
+
+	<Styles.Resources>
+		<converters:FocusColorConverter x:Key="focusColor"/>
+	</Styles.Resources>
+
+  <Style Selector="controls|SemiSummatorControl">
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <Canvas Name="SemiSummatorCanvas" Height="100" Width="80">
+			  <Path Data="M 0,0 l 80,0 l 0,100 l -80,0 l 0,-100" Stroke="{TemplateBinding FocusOnElement, Converter={StaticResource focusColor}}" StrokeThickness="1" Fill="LightGreen"/>
+			  <Ellipse Name="Input1" Fill="Magenta" Width="10" Height="10" Canvas.Top="30"/>
+			  <Ellipse Name="Input2" Fill="Magenta" Width="10" Height="10" Canvas.Bottom="30"/>
+			  <Ellipse Name="Output1" Fill="Magenta" Width="10" Height="10" Canvas.Top="30" Canvas.Left="70"/>
+			  <Ellipse Name="Output2" Fill="Magenta" Width="10" Height="10" Canvas.Bottom="30" Canvas.Left="70"/>
+			  <TextBlock Text="SemiSummator" FontSize="11"/>
+			  <TextBlock Text="X" Canvas.Top="25" Canvas.Left="12"/>
+			  <TextBlock Text="Y" Canvas.Top="55" Canvas.Left="12"/>
+			  <TextBlock Text="С" Canvas.Top="25" Canvas.Left="58"/>
+			  <TextBlock Text="S" Canvas.Top="55" Canvas.Left="58"/>
+		  </Canvas>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>

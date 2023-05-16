@@ -1,0 +1,20 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:CourseWork"
+             x:Class="CourseWork.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+		<StyleInclude Source="/Views/Control/InputControl.axaml"/>
+		<StyleInclude Source="/Views/Control/OutputControl.axaml"/>
+		<StyleInclude Source="/Views/Control/AndControl.axaml"/>
+		<StyleInclude Source="/Views/Control/OrControl.axaml"/>
+		<StyleInclude Source="/Views/Control/XorControl.axaml"/>
+		<StyleInclude Source="/Views/Control/NotControl.axaml"/>
+		<StyleInclude Source="/Views/Control/SemiSummatorControl.axaml"/>
+		<StyleInclude Source="/Views/Control/EditableTextBlock.axaml"/>
+    </Application.Styles>
+</Application>
